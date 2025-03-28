@@ -1,4 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
+﻿using System;
 using System.Globalization;
 
 namespace GerenciadorDeContaDeBanco
@@ -10,16 +10,23 @@ namespace GerenciadorDeContaDeBanco
         public double Saldo;
         public double Deposito;
         public double Saque;
+
         public double Depositar()
         {
-            return Saldo + Deposito;
-
+            Saldo += Deposito;
+            return Saldo;
         }
+
         public double Sacar()
         {
-            return Saldo - Saque;
+            Saldo -= Saque;
+            return Saldo;
         }
-        
-    }
 
+        public void ExibirSaldo()
+        {
+            Console.WriteLine($"Saldo atual da conta {NumeroConta} ({Titular}): R$ {Saldo.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+    }
 }
+
