@@ -11,17 +11,13 @@ namespace MyApp
             Conta.NumeroConta = Console.ReadLine();
             Console.WriteLine("Digite o titular:");
             Conta.Titular = Console.ReadLine();
-            Console.WriteLine("Quanto deseja adicionar ao seu saldo:");
-            
+            Console.WriteLine("Quanto deseja adicionar ao seu saldo:");           
             Conta.Saldo = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
-            Conta.ExibirSaldo();
-            
+            Conta.ExibirSaldo();            
             Console.WriteLine("Quanto deseja Depositar a essa conta:");
-            Conta.Deposito = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
-            
+            Conta.Deposito = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);            
             Console.WriteLine($"O numero da Conta é{Conta.NumeroConta} o titular é {Conta.Titular} Com o saldo de {Conta.Depositar().ToString("F2",CultureInfo.InvariantCulture)}");
-            Console.WriteLine("Quanto deseja sacar a essa conta:");
-            //
+            Console.WriteLine("Quanto deseja sacar a essa conta:");           
             Conta.Saque = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
             Console.WriteLine($"O numero da Conta é{Conta.NumeroConta} o titular é {Conta.Titular} Com o saldo de {Conta.Sacar().ToString("F2", CultureInfo.InvariantCulture)}");
 
